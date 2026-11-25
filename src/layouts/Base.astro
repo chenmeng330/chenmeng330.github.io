@@ -1,0 +1,77 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = "秦羲子的个人网站。小说、长文与随笔。",
+} = Astro.props;
+
+const pageTitle = title ? `${title} · 秦羲子` : "秦羲子";
+const path = Astro.url.pathname;
+
+const nav = [
+  { href: "/fiction/", label: "作品" },
+  { href: "/longform/", label: "长文" },
+  { href: "/essays/", label: "随笔" },
+  { href: "/about/", label: "关于" },
+];
+
+const isCurrent = (href: string) =>
+  href === "/" ? path === "/" : path.startsWith(href);
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="秦羲子"
+      href="/rss.xml"
+    />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap-wide inner">
+        <a class="brand" href="/">秦羲子</a>
+        <nav class="nav" aria-label="主导航">
+          {
+            nav.map((item) => (
+              <a
+                href={item.href}
+                aria-current={isCurrent(item.href) ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap-wide inner">
+        <span>© {new Date().getFullYear()} 秦羲子</span>
+        <span>文字属我，转载先说一声</span>
+      </div>
+    </footer>
+  </body>
+</html>

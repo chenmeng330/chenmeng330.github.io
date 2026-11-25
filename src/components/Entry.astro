@@ -1,0 +1,26 @@
+---
+import type { Text } from "../lib/texts";
+import { fmtDate } from "../lib/texts";
+
+interface Props {
+  text: Text;
+}
+
+const { text } = Astro.props;
+const { title, slug, category, date, summary } = text.data;
+---
+
+<li>
+  <a class="entry" href={`/${slug}/`}>
+    {date ? (
+      <time datetime={date.toISOString()}>{fmtDate(date)}</time>
+    ) : (
+      <span class="entry-no-date" aria-hidden="true"></span>
+    )}
+    <h3 class="title">
+      {title}
+      {category && <span class="tag">{category}</span>}
+    </h3>
+    {summary && <p class="desc">{summary}</p>}
+  </a>
+</li>

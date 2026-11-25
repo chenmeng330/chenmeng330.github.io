@@ -1,0 +1,55 @@
+---
+import { render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { allTexts, fmtDateLong, kindMeta, type Text } from "../lib/texts";
+
+export async function getStaticPaths() {
+  const texts = await allTexts();
+  return texts.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: Text;
+}
+
+const { entry } = Astro.props;
+const { title, kind, category, date, summary } = entry.data;
+const meta = kindMeta[kind];
+const { Content } = await render(entry);
+
+// 同栏目内的上一篇 / 下一篇
+const siblings = (await allTexts()).filter((t) => t.data.kind === kind);
+const index = siblings.findIndex((t) => t.id === entry.id);
+const newer = index > 0 ? siblings[index - 1] : undefined;
+const older = index >= 0 && index < siblings.length - 1 ? siblings[index + 1] : undefined;
+---
+
+<Base title={title} description={summary ?? title}>
+  <article class="wrap">
+    <header class="article-head">
+      <div class="meta">
+        <a class="cat" href={meta.href}>{meta.label}</a>
+        {category && <span>{category}</span>}
+        <time datetime={date?.toISOString()}>{fmtDateLong(date)}</time>
+      </div>
+      <h1>{title}</h1>
+      {summary && <p class="summary">{summary}</p>}
+    </header>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <footer class="article-foot">
+      <span>
+        {older ? <a href={`/${older.data.slug}/`}>← {older.data.title}</a> : <a href={meta.href}>← 回{meta.label}</a>}
+      </span>
+      <span>
+        {newer ? <a href={`/${newer.data.slug}/`}>{newer.data.title} →</a> : <a href="/">首页 →</a>}
+      </span>
+    </footer>
+  </article>
+</Base>

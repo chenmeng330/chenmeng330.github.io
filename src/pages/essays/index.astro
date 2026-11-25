@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+import Entry from "../../components/Entry.astro";
+import { textsOf } from "../../lib/texts";
+
+const items = await textsOf("essay");
+---
+
+<Base title="随笔" description="秦羲子的随笔与日常。">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">Essays</p>
+      <h1>随笔</h1>
+      <p class="intro">日常、碎片，没头没尾的话。想到就写，不保证有下文。</p>
+    </header>
+
+    <ul class="entries">
+      {items.map((t) => <Entry text={t} />)}
+    </ul>
+  </div>
+</Base>
