@@ -2,7 +2,7 @@
 title: "一百零八道"
 slug: "yibailingba-dao"
 kind: work
-category: "原创短篇"
+category: '“她”的写作'
 summary: "师父死后的第二夜，我还是打开了那只箱子，数面具里的刻痕。"
 ---
 

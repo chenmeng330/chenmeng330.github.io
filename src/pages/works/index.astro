@@ -4,7 +4,7 @@ import Entry from "../../components/Entry.astro";
 import { groupByCategory, textsOf } from "../../lib/texts";
 
 const items = await textsOf("work");
-const groups = groupByCategory(items, ["原创短篇", "东方同人", "考据"]);
+const groups = groupByCategory(items, ["“她”的写作", "东方同人", "考据"]);
 ---
 
 <Base title="作品" description="秦羲子的小说、同人与考据长文。">
@@ -13,7 +13,7 @@ const groups = groupByCategory(items, ["原创短篇", "东方同人", "考据"]
       <p class="eyebrow">Works</p>
       <h1>作品</h1>
       <p class="intro">
-        小说、同人，还有些长得像论文的。按类目放，不按时间。
+        只是一些长文章，小说或是“论文”。
       </p>
     </header>
 
