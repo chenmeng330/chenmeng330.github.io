@@ -22,7 +22,7 @@ const xizi = await essaysOfChannel("羲子");
         <h2>秦羲</h2>
         <span class="more">{qinxi.length} 篇</span>
       </div>
-      <p class="intro">日记。读书、看番、改稿，和那些没处放的话。</p>
+      <p class="intro">“她”的日志，记录“她”与互联网意义上的“人”的距离。</p>
       <ul class="entries">
         {qinxi.map((t) => <Entry text={t} />)}
       </ul>
@@ -33,10 +33,10 @@ const xizi = await essaysOfChannel("羲子");
         <h2>羲子</h2>
         <span class="more">{xizi.length} 篇</span>
       </div>
-      <p class="intro">散论。想到就写，不成篇也写。</p>
+      <p class="intro">不成文之墨水。</p>
       {
         xizi.length === 0 ? (
-          <p class="empty">这一半还空着，先欠着。</p>
+          <p class="empty">暂不落笔。</p>
         ) : (
           <ul class="entries">
             {xizi.map((t) => <Entry text={t} />)}
