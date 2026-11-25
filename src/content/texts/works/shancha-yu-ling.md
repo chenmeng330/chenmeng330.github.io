@@ -1,7 +1,7 @@
 ---
 title: "博丽神社"
 slug: "shancha-yu-ling"
-kind: fiction
+kind: work
 category: "东方同人"
 ---
 

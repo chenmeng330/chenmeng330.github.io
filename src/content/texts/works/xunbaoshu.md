@@ -1,7 +1,7 @@
 ---
 title: "寻宝鼠"
 slug: "xunbaoshu"
-kind: fiction
+kind: work
 category: "东方同人"
 summary: "娜兹玲受人所托，去找一件掉了的东西。"
 ---

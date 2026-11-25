@@ -34,7 +34,7 @@ export const GET: APIRoute = async ({ site }) => {
     "  <channel>",
     "    <title>秦羲子</title>",
     `    <link>${base.href}</link>`,
-    "    <description>小说、长文和随笔</description>",
+    "    <description>作品、图画、杂项与随笔</description>",
     "    <language>zh-CN</language>",
     items.join("\n"),
     "  </channel>",

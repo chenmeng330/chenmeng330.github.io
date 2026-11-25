@@ -1,7 +1,7 @@
 ---
 title: "何姓女人"
 slug: "hexing-nvren"
-kind: fiction
+kind: work
 category: "原创短篇"
 summary: "陈秀莲，七岁，以身为愿，未还。"
 ---

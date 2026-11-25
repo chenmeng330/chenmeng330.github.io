@@ -1,0 +1,46 @@
+---
+import Base from "../../layouts/Base.astro";
+import { fmtDate, textsOf } from "../../lib/texts";
+
+const items = await textsOf("gallery");
+---
+
+<Base title="图画" description="秦羲子的画与图。">
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">Gallery</p>
+      <h1>图画</h1>
+      <p class="intro">
+        手画的，还有那些算不上文章的东西。多半不好看，但都是自己弄的。
+      </p>
+    </header>
+
+    {
+      items.length === 0 ? (
+        <p class="empty">
+          这一栏还空着。等哪天画得能拿出手了再往上放，现在先占个位子。
+        </p>
+      ) : (
+        <ul class="gallery">
+          {items.map((t) => (
+            <li>
+              <a href={`/${t.data.slug}/`}>
+                <figure>
+                  {t.data.cover ? (
+                    <img src={t.data.cover} alt={t.data.title} loading="lazy" />
+                  ) : (
+                    <div class="gallery-blank" aria-hidden="true" />
+                  )}
+                  <figcaption>
+                    <span>{t.data.title}</span>
+                    <time>{fmtDate(t.data.date)}</time>
+                  </figcaption>
+                </figure>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</Base>

@@ -45,10 +45,21 @@ export const kindMeta: Record<
   Kind,
   { label: string; href: string; english: string }
 > = {
-  fiction: { label: "作品", href: "/fiction/", english: "Fiction" },
-  longform: { label: "长文", href: "/longform/", english: "Longform" },
+  work: { label: "作品", href: "/works/", english: "Works" },
+  gallery: { label: "图画", href: "/gallery/", english: "Gallery" },
+  misc: { label: "杂项", href: "/misc/", english: "Miscellany" },
   essay: { label: "随笔", href: "/essays/", english: "Essays" },
 };
+
+/** 随笔的两个区 */
+export const channels = ["秦羲", "羲子"] as const;
+
+export type Channel = (typeof channels)[number];
+
+/** 某一区里的随笔 */
+export async function essaysOfChannel(channel: Channel): Promise<Text[]> {
+  return (await textsOf("essay")).filter((t) => t.data.channel === channel);
+}
 
 /** 按分类分组，保持给定顺序 */
 export function groupByCategory(

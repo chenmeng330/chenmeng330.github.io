@@ -1,7 +1,7 @@
 ---
 title: "秦造河胜"
 slug: "qinzao-hesheng"
-kind: fiction
+kind: work
 category: "东方同人"
 summary: "东方同人长篇。秦造与河胜，两个名字共用一副身体的故事。"
 ---

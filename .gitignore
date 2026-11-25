@@ -3,3 +3,5 @@ dist/
 .astro/
 .env
 .DS_Store
+# Office 开着文档时留下的临时锁文件
+~$*

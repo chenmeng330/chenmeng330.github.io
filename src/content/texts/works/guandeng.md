@@ -1,7 +1,7 @@
 ---
 title: "关灯"
 slug: "guandeng"
-kind: fiction
+kind: work
 category: "原创短篇"
 date: 2026-11-20
 summary: "晚自习后留下来关灯锁门的人，和一个总留到最后的人。"

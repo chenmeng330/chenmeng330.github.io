@@ -1,7 +1,7 @@
 ---
 title: "师父周德顺"
 slug: "zhoude-shun"
-kind: fiction
+kind: work
 category: "原创短篇"
 summary: "霜降送茅船，师父绕了一条远路，柜里那张愿表写着「未还」。"
 ---

@@ -6,22 +6,28 @@ const latest = (await allTexts()).slice(0, 6);
 
 const thresholds = [
   {
-    href: "/fiction/",
-    kicker: "Fiction",
+    href: "/works/",
+    kicker: "Works",
     title: "作品",
-    desc: "原创短篇、长篇，和东方同人。",
+    desc: "原创短篇、东方同人，还有考据长文。",
   },
   {
-    href: "/longform/",
-    kicker: "Longform",
-    title: "长文",
-    desc: "考据、杂论，和一些太长了的东西。",
+    href: "/gallery/",
+    kicker: "Gallery",
+    title: "图画",
+    desc: "手画的，和一些算不上文章的东西。",
+  },
+  {
+    href: "/misc/",
+    kicker: "Miscellany",
+    title: "杂项",
+    desc: "放不进另外几栏的，都在这儿。",
   },
   {
     href: "/essays/",
     kicker: "Essays",
     title: "随笔",
-    desc: "日常、碎片，没头没尾的话。",
+    desc: "日记与散论，两个人各写一半。",
   },
 ];
 ---
@@ -31,7 +37,7 @@ const thresholds = [
     <p class="eyebrow">广州 · 写作者</p>
     <h1>秦羲子</h1>
     <p class="lede">
-      我写小说，也写些没人考证的旧事。喜欢民俗、宗教，和一切人留下的痕迹。
+      为二十二世纪鸣响第一门礼炮
     </p>
     <span class="rule-dot"></span>
   </section>
@@ -51,7 +57,7 @@ const thresholds = [
   <section class="wrap-wide">
     <div class="section-head">
       <h2>近作</h2>
-      <a class="more" href="/fiction/">全部 →</a>
+      <a class="more" href="/works/">全部 →</a>
     </div>
     <ul class="entries">
       {

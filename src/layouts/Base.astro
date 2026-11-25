@@ -8,15 +8,16 @@ interface Props {
 
 const {
   title,
-  description = "秦羲子的个人网站。小说、长文与随笔。",
+  description = "秦羲子的个人网站。记录秦羲子的文字与生活。",
 } = Astro.props;
 
 const pageTitle = title ? `${title} · 秦羲子` : "秦羲子";
 const path = Astro.url.pathname;
 
 const nav = [
-  { href: "/fiction/", label: "作品" },
-  { href: "/longform/", label: "长文" },
+  { href: "/works/", label: "作品" },
+  { href: "/gallery/", label: "图画" },
+  { href: "/misc/", label: "杂项" },
   { href: "/essays/", label: "随笔" },
   { href: "/about/", label: "关于" },
 ];
@@ -70,7 +71,7 @@ const isCurrent = (href: string) =>
     <footer class="site-footer">
       <div class="wrap-wide inner">
         <span>© {new Date().getFullYear()} 秦羲子</span>
-        <span>文字属我，转载先说一声</span>
+        <span>欢迎阅览，转载表明</span>
       </div>
     </footer>
   </body>

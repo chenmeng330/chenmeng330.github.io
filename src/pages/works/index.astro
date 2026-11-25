@@ -3,16 +3,18 @@ import Base from "../../layouts/Base.astro";
 import Entry from "../../components/Entry.astro";
 import { groupByCategory, textsOf } from "../../lib/texts";
 
-const items = await textsOf("longform");
-const groups = groupByCategory(items, ["考据", "杂论", "长篇记述"]);
+const items = await textsOf("work");
+const groups = groupByCategory(items, ["原创短篇", "东方同人", "考据"]);
 ---
 
-<Base title="长文" description="秦羲子的考据、杂论与长篇记述。">
+<Base title="作品" description="秦羲子的小说、同人与考据长文。">
   <div class="wrap">
     <header class="page-head">
-      <p class="eyebrow">Longform</p>
-      <h1>长文</h1>
-      <p class="intro">考据、杂论，和一些一次说不完的事。</p>
+      <p class="eyebrow">Works</p>
+      <h1>作品</h1>
+      <p class="intro">
+        小说、同人，还有些长得像论文的。按类目放，不按时间。
+      </p>
     </header>
 
     {

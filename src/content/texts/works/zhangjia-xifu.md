@@ -1,7 +1,7 @@
 ---
 title: "张家媳妇"
 slug: "zhangjia-xifu"
-kind: fiction
+kind: work
 category: "原创短篇"
 summary: "傩堂里还愿的女人，男人在广东。"
 ---

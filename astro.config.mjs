@@ -11,4 +11,9 @@ export default defineConfig({
   markdown: {
     shikiConfig: { theme: "github-light" },
   },
+  // 老的栏目页，别让人点旧链接掉进 404
+  redirects: {
+    "/fiction": "/works/",
+    "/longform": "/works/",
+  },
 });

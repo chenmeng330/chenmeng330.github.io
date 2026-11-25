@@ -1,21 +1,48 @@
 ---
 import Base from "../../layouts/Base.astro";
 import Entry from "../../components/Entry.astro";
-import { textsOf } from "../../lib/texts";
+import { essaysOfChannel } from "../../lib/texts";
 
-const items = await textsOf("essay");
+const qinxi = await essaysOfChannel("秦羲");
+const xizi = await essaysOfChannel("羲子");
 ---
 
-<Base title="随笔" description="秦羲子的随笔与日常。">
+<Base title="随笔" description="秦羲子的随笔与日记。">
   <div class="wrap">
     <header class="page-head">
       <p class="eyebrow">Essays</p>
       <h1>随笔</h1>
-      <p class="intro">日常、碎片，没头没尾的话。想到就写，不保证有下文。</p>
+      <p class="intro">
+        两个人写的东西。左边那一半按天记，右边那一半想到才写。
+      </p>
     </header>
 
-    <ul class="entries">
-      {items.map((t) => <Entry text={t} />)}
-    </ul>
+    <section>
+      <div class="section-head">
+        <h2>秦羲</h2>
+        <span class="more">{qinxi.length} 篇</span>
+      </div>
+      <p class="intro">日记。读书、看番、改稿，和那些没处放的话。</p>
+      <ul class="entries">
+        {qinxi.map((t) => <Entry text={t} />)}
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>羲子</h2>
+        <span class="more">{xizi.length} 篇</span>
+      </div>
+      <p class="intro">散论。想到就写，不成篇也写。</p>
+      {
+        xizi.length === 0 ? (
+          <p class="empty">这一半还空着，先欠着。</p>
+        ) : (
+          <ul class="entries">
+            {xizi.map((t) => <Entry text={t} />)}
+          </ul>
+        )
+      }
+    </section>
   </div>
 </Base>
