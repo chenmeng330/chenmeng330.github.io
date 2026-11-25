@@ -3,6 +3,7 @@ title: "张家媳妇"
 slug: "zhangjia-xifu"
 kind: work
 category: '“她”的写作'
+date: 2026-11-01
 summary: "傩堂里还愿的女人，男人在广东。"
 ---
 

@@ -3,6 +3,7 @@ title: "师父周德顺"
 slug: "zhoude-shun"
 kind: work
 category: '“她”的写作'
+date: 2026-11-15
 summary: "霜降送茅船，师父绕了一条远路，柜里那张愿表写着「未还」。"
 ---
 

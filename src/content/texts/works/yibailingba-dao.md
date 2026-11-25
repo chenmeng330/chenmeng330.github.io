@@ -3,6 +3,7 @@ title: "一百零八道"
 slug: "yibailingba-dao"
 kind: work
 category: '“她”的写作'
+date: 2026-11-1
 summary: "师父死后的第二夜，我还是打开了那只箱子，数面具里的刻痕。"
 ---
 

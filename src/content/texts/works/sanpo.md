@@ -3,6 +3,7 @@ title: "三婆"
 slug: "sanpo"
 kind: work
 category: '“她”的写作'
+date: 2026-11-8
 summary: "瞎眼的三婆走进院里，闻出这批香里掺了柏木。"
 ---
 
