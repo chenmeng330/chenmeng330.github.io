@@ -3,6 +3,7 @@ title: "以神为衣的凡人：秦河胜"
 slug: "qin-hesheng"
 kind: work
 category: "考据"
+date: 2026-11-24
 summary: "秦河胜，一个被神穿过的凡人。从《日本书纪》的记载出发，追一个渡来人如何在神话与史书之间留下痕迹。"
 ---
 

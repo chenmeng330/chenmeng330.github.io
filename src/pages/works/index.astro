@@ -4,7 +4,7 @@ import Entry from "../../components/Entry.astro";
 import { groupByCategory, textsOf } from "../../lib/texts";
 
 const items = await textsOf("work");
-const groups = groupByCategory(items, ["“她”的写作", "东方同人", "考据"]);
+const groups = groupByCategory(items, ["“她”的写作", "一些短篇","东方同人", "考据"]);
 ---
 
 <Base title="作品" description="秦羲子的小说、同人与考据长文。">
