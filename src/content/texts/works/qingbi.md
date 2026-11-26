@@ -2,7 +2,7 @@
 title: "青笔"
 slug: "qingbi"
 kind: work
-category: '“一些短篇'
+category: '一些短篇'
 date: 2026-4
 summary: "往日仍在"
 ---
@@ -201,7 +201,7 @@ summary: "往日仍在"
 　　
 青春仍在。
 
-###补记
+### 补记
 
 学生时代的自己总让人捉摸不透
 
